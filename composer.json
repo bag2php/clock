@@ -1,0 +1,17 @@
+{
+    "name": "bag2/clock",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Bag2\\Clock\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PsrProposal\\Clock\\": "psr/"
+        }
+    },
+    "require": {
+        "php": ">=7.3"
+    }
+}
