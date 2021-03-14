@@ -13,5 +13,9 @@
     },
     "require": {
         "php": ">=7.3"
+    },
+    "require-dev": {
+        "nesbot/carbon": "^2.46",
+        "cakephp/chronos": "^2.1"
     }
 }
