@@ -3,7 +3,7 @@
 namespace Bag2\Clock;
 
 use DateTimeImmutable;
-use PsrProposal\Clock\ClockInterface;
+use Psr\Clock\ClockInterface;
 
 /**
  * A clock class that return freezed time for testing.

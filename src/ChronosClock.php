@@ -6,7 +6,7 @@ namespace Bag2\Clock;
 
 use Cake\Chronos\Chronos;
 use DateTimeImmutable;
-use PsrProposal\Clock\ClockInterface;
+use Psr\Clock\ClockInterface;
 
 class ChronosClock implements ClockInterface
 {

@@ -6,16 +6,24 @@
             "Bag2\\Clock\\": "src/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "PsrProposal\\Clock\\": "psr/"
-        }
-    },
     "require": {
-        "php": ">=7.3"
+        "php": ">=7.3",
+        "psr/clock": "@dev"
     },
     "require-dev": {
         "nesbot/carbon": "^2.46",
         "cakephp/chronos": "^2.1"
+    },
+    "provide": {
+        "psr/clock-implementation": "1.0-dev"
+    },
+    "repositories": {
+        "dev": {
+            "type": "github",
+            "url": "https://github.com/php-fig/clock"
+        }
+    },
+    "config": {
+        "sort-packages": true
     }
 }

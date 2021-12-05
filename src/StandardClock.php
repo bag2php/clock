@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Bag2\Clock;
 
 use DateTimeImmutable;
-use PsrProposal\Clock\ClockInterface;
+use Psr\Clock\ClockInterface;
 
 /**
  * Clock class implementation that returns DateTimeImmutable

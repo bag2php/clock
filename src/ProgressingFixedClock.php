@@ -6,7 +6,7 @@ use function explode;
 use function microtime;
 use DateInterval;
 use DateTimeImmutable;
-use PsrProposal\Clock\ClockInterface;
+use Psr\Clock\ClockInterface;
 
 /**
  * A clock class that returns the time progressed in real time from a fixed time for testing.

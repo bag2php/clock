@@ -6,7 +6,7 @@ namespace Bag2\Clock;
 
 use Carbon\CarbonImmutable;
 use DateTimeImmutable;
-use PsrProposal\Clock\ClockInterface;
+use Psr\Clock\ClockInterface;
 
 class CarbonClock implements ClockInterface
 {
