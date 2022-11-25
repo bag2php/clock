@@ -19,7 +19,7 @@ class FixedClock implements ClockInterface
     private $datetime;
 
     /**
-     * @phpstan-param T
+     * @phpstan-param T $datetime
      */
     public function __construct(DateTimeImmutable $datetime)
     {

@@ -10,9 +10,6 @@ use Psr\Clock\ClockInterface;
 
 class CarbonClock implements ClockInterface
 {
-    /**
-     * @return Chronos
-     */
     public function now(): DateTimeImmutable
     {
         return new CarbonImmutable();
