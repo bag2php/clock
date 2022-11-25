@@ -1,23 +1,24 @@
 # Bag2\Clock
 
-Proof-of-concept implementation for the clock interface I propose.
+A PSR-20 Clock implementation.
 
 ## Interface
 
-In my opinion, the interface just needs a now method that returns a DateTimeImmutable.
+This is the only method provided by the [PSR-20 Clock](https://www.php-fig.org/psr/psr-20/) interface.
+
 
 ```php
 <?php
 
-declare(strict_types=1);
-
-namespace PsrProposal\Clock;
-
-use DateTimeImmutable;
+namespace Psr\Clock;
 
 interface ClockInterface
 {
-    public function now(): DateTimeImmutable;
+    /**
+     * Returns the current time as a DateTimeImmutable Object
+     */
+    public function now(): \DateTimeImmutable;
+
 }
 ```
 

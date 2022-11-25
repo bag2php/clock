@@ -8,7 +8,7 @@
     },
     "require": {
         "php": ">=7.3",
-        "psr/clock": "@dev"
+        "psr/clock": "^1.0"
     },
     "require-dev": {
         "cakephp/chronos": "^2.1",
@@ -16,7 +16,7 @@
         "phpstan/phpstan": "^1.9"
     },
     "provide": {
-        "psr/clock-implementation": "1.0-dev"
+        "psr/clock-implementation": "1.0"
     },
     "repositories": {
         "dev": {
