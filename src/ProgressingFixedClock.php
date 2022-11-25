@@ -1,12 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Bag2\Clock;
 
-use function explode;
-use function microtime;
 use DateInterval;
 use DateTimeImmutable;
 use Psr\Clock\ClockInterface;
+use function time;
 
 /**
  * A clock class that returns the time progressed in real time from a fixed time for testing.
@@ -21,26 +22,27 @@ class ProgressingFixedClock implements ClockInterface
      */
     private $datetime;
 
-    /**
-     * @var string
-     */
-    private $origin_msec;
-
-    /**
-     * @var string
-     */
+    /** @var int */
     private $origin_sec;
 
     /**
-     * @phpstan-param T
-     * @param string $microtime A return value of {@see microtime()} function.
+     * @phpstan-param T $datetime
+     * @param int $sec A return value of {@see time()} function.
      */
-    public function __construct(DateTimeImmutable $datetime, string $microtime)
+    protected function __construct(DateTimeImmutable $datetime, int $sec)
     {
         $this->datetime = $datetime;
-        [$msec, $sec] = explode(' ', $microtime, 2);
-        $this->origin_msec = $msec;
         $this->origin_sec = $sec;
+    }
+
+    /**
+     * @phpstan-param T $datetime
+     * @param int $sec A return value of {@see time()} function.
+     * @return self<T>
+     */
+    public static function fromTime(DateTimeImmutable $datetime, int $sec): self
+    {
+        return new self($datetime, $sec);
     }
 
     /**
@@ -48,7 +50,7 @@ class ProgressingFixedClock implements ClockInterface
      */
     public function now(): DateTimeImmutable
     {
-        [$now_msec, $now_sec] = explode(' ', microtime(), 2);
+        $now_sec = time();
 
         if ($this->origin_sec === $now_sec) {
             return $this->datetime;
