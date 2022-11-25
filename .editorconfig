@@ -21,3 +21,8 @@ indent_style = space
 [{composer.lock,composer.json}]
 indent_size = 4
 indent_style = space
+
+# NEON - https://ne-on.org/
+[{*.neon,*.neon.dist}]
+indent_style = tab
+indent_size = 4

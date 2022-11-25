@@ -11,8 +11,9 @@
         "psr/clock": "@dev"
     },
     "require-dev": {
+        "cakephp/chronos": "^2.1",
         "nesbot/carbon": "^2.46",
-        "cakephp/chronos": "^2.1"
+        "phpstan/phpstan": "^1.9"
     },
     "provide": {
         "psr/clock-implementation": "1.0-dev"
